@@ -20,11 +20,12 @@ function produtos($id) {
     //tratando id recebido
     $id = numero($id);
     //buscando informacoes do produto no db
-    $db_produto = mysqli_fetch_array(mysqli_query($conn, "SELECT id,nome FROM produtos WHERE id='".$id."'"));
+    $db_produto = mysqli_fetch_array(mysqli_query($conn, "SELECT id,nome,foto FROM produtos WHERE id='".$id."'"));
 
     $nome_produto = $db_produto["nome"];
 
     echo "ID: ".$id;
     echo "Nome do produto: ".$nome_produto."<br/>";
+    echo "Imagem: <img src='imagens/produtos/".$db_produto["foto"]."'>";
     
 }
