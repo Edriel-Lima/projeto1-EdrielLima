@@ -26,6 +26,6 @@ function produtos($id) {
 
     echo "ID: ".$id;
     echo "Nome do produto: ".$nome_produto."<br/>";
-    echo "Imagem: <img src='imagens/produtos/".$db_produto["foto"]."'>";
+    echo "Imagem do produto: <img src='imagens/produtos/".$db_produto["foto"]."'>";
     
 }
